@@ -26,22 +26,27 @@ members.append(new_member)
 file = open('members.txt', 'w')
 file.writelines(members)
 file.close()
-print(members)
-# John Smith
-#
-# Sen Lakmi
-#
-# Sono Octonot
-#
-# Solomon Right
-#
 
 # Coding Exercise 4
 # Create a program that generates multiple text files by iterating over the filenames list. The text Hello should be written inside each generated text file.
-#
-# Solution
-#
-#
-#
+
+files = ['file1.txt', 'file2.txt']
+
+for txt_file in files:
+    greeting = 'Hello'
+    file = open(txt_file, 'w')
+    file.writelines(greeting)
+    file.close()
+
 # Coding Exercise 5
 # Please download the three text files a.txt, b.txt, and c.txt from the resources. Then, create a program that reads each text file and prints out the content of each in the command line. The expected output would be like the following:
+
+files = ['a.txt', 'b.txt', 'c.txt']
+
+for txt_file in files:
+    file = open(txt_file, 'r')
+    content = file.read()
+    file.close()
+    print(content)
+
+
