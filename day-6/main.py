@@ -7,7 +7,7 @@ while True:
             todo = input('enter a todo:') + "\n"
 
             file = open('todos.txt', 'r') # r for read
-            todos = file.readlines()
+            todos = file.read()
             file.close()
 
             todos.append(todo)
@@ -17,7 +17,7 @@ while True:
             file.close()
         case 'show' | 'display': # <- BITWISE OR operator
             file = open('todos.txt', 'r')  # r for read
-            todos = file.readlines()
+            todos = file.read()
             file.close()
             for item in todos:
                 print(item)
