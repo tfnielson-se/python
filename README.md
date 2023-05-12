@@ -1,1 +1,1 @@
-# python-in-60days
+# Python learning path
