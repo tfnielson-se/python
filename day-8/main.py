@@ -44,7 +44,11 @@ while True:
                 file.writelines(todos)
 
         case 'completed':
+            with open('todos.txt', 'r') as file:
+                todos = file.readlines()
+
             for i, item in enumerate(todos):
+                item = item.strip('\n')
                 print(f"{i}-{item}")
 
             item_completed = int(input('Enter number of completed item: '))
@@ -54,6 +58,9 @@ while True:
             else:
                 todos.pop(item_completed)
                 print('item marked as completed and removed from list')
+
+            with open('todos.txt', 'w') as file:
+                file.writelines(todos)
 
         case 'exit':
             break
